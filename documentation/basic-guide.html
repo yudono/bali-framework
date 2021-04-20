@@ -32,9 +32,9 @@
                 <br>
                 <p class="mb-4 text-gray-600">example : </p>
                 <pre><code class="language-html">
-&lt;div id="demo" class="mt-4 bg-gray-100 h-64 flex flex-col items-center justify-center"&gt;
+&lt;div id="demo"&gt;
     &lt;input type="text" $keyup="name = $.value" placeholder="Your Name 1"&gt;
-    &lt;p class="py-4"&gt;My Name is ${name}&lt;/p&gt;
+    &lt;p&gt;My Name is ${name}&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;script&gt;
@@ -44,9 +44,9 @@
                 </code></pre>
 
                 <p class="mt-12 text-gray-600">output : </p>
-                <div id="demo">
+                <div id="demo" class="mt-4 bg-gray-100 h-64 flex flex-col items-center justify-center">
                     <input type="text" $keyup="name = $.value" placeholder="Your Name 1">
-                    <p>My Name is ${name}</p>
+                    <p class="py-4">My Name is ${name}</p>
                 </div>
 
                 <br>
