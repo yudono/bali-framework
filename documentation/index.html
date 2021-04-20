@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Framework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="../bali.js"></script>
+</head>
+
+<body>
+
+    <div class="flex flex-row">
+        <div class="w-1/5">
+            <div class="p-8">
+                <a href="index.html" class="table font-medium py-1 text-gray-800 text-blue-600">Introduction</a>
+                <a href="installation.html" class="table font-medium py-1 text-gray-800">Installation</a>
+                <a href="basic-guide.html" class="table font-medium py-1 text-gray-800">Basic Guide</a>
+                <a href="api-reference.html" class="table font-medium py-1 text-gray-800">API reference</a>
+            </div>
+        </div>
+        <div class="w-4/5">
+            <div class="p-8">
+                <h1 class="text-3xl text-gray-800 mb-12">Introduction</h1>
+                <h2 class="text-xl text-gray-800 mb-4">what is <b>bali.js</b>?</h2>
+                <hr><br>
+                <p class="mb-4 text-gray-600">Bali.js is a simple library for making data changes in a short and simple manner. the concept of changing this data has already been applied to existing frameworks such as reactjs and vuejs.</p>
+                <p class="mb-4 text-gray-600">The data will be stored in a state, if at any time the data is changed it will trigger a function to re-render the latest data.</p>
+                <p class="mb-4 text-gray-600">for example, when we have a variable or state called count which stores the number 0, and is displayed with text, then when we want to make data changes, we must call a function to re-render the data. because the changes only change in
+                    the state and have not been displayed. some frameworks summarize it with setState and so on.</p>
+                <br>
+                <p class="mb-4 text-gray-600">example of changing bali.js data : </p>
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="/path/to/bali.js"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id="demo"&gt;
+    &lt;button $click="count++"&gt;Increment (+)&lt;/button&gt;
+    &lt;button $click="count--"&gt;Decrement (-)&lt;/button&gt;
+    &lt;p&gt;Count value is ${count}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    let count = 0
+    let bali = new Bali(document.getElementById('demo'))
+&lt;/script&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+
+                <p class="mt-12 text-gray-600">output : </p>
+                <div id="demo" class="mt-4 bg-gray-100 h-64 flex flex-col items-center justify-center">
+                    <div>
+                        <button $click="count++" class="bg-gray-200 text-gray-600 py-2 px-4 rounded-md">Increment (+)</button>
+                        <button $click="count--" class="bg-gray-200 text-gray-600 py-2 px-4 rounded-md">Decrement (-)</button>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 p-8">Count value is ${count}</p>
+                    </div>
+                </div>
+
+                <br>
+
+                <a href="installation.html" class="table py-2 px-4 text-white bg-blue-600 rounded-md">Next - Installation<span class="ml-4">➜</span></a>
+                <br>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let count = 0
+        let bali = new Bali(document.getElementById('demo'))
+    </script>
+
+</body>
+
+</html>

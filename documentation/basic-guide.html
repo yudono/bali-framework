@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Framework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="../bali.js"></script>
+</head>
+
+<body>
+
+    <div class="flex flex-row">
+        <div class="w-1/5">
+            <div class="p-8">
+                <a href="index.html" class="table font-medium py-1 text-gray-800">Introduction</a>
+                <a href="installation.html" class="table font-medium py-1 text-gray-800">Installation</a>
+                <a href="basic-guide.html" class="table font-medium py-1 text-gray-800 text-blue-600">Basic Guide</a>
+                <a href="api-reference.html" class="table font-medium py-1 text-gray-800">API reference</a>
+            </div>
+        </div>
+        <div class="w-4/5">
+            <div class="p-8">
+                <h1 class="text-3xl text-gray-800 mb-12">Basic Guide</h1>
+                <h2 class="text-xl text-gray-800 mb-4">how to use it?</h2>
+                <hr><br>
+                <p class="mb-4 text-gray-600">You can use it as a trigger event listener, such as onclick, onchange, onkeyup and so on. when an event occurs, changes will occur in the state or related variables and attributes.</p>
+                <br>
+                <p class="mb-4 text-gray-600">example : </p>
+                <pre><code class="language-html">
+&lt;div id="demo" class="mt-4 bg-gray-100 h-64 flex flex-col items-center justify-center"&gt;
+    &lt;input type="text" $keyup="name = $.value" placeholder="Your Name 1"&gt;
+    &lt;p class="py-4"&gt;My Name is ${name}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    let name = ''
+    let bali = new Bali(document.querySelector('#demo'))
+&lt;/script&gt;
+                </code></pre>
+
+                <p class="mt-12 text-gray-600">output : </p>
+                <div id="demo" class="mt-4 bg-gray-100 h-64 flex flex-col items-center justify-center">
+                    <input type="text" $keyup="name = $.value" placeholder="Your Name 1">
+                    <p class="py-4">My Name is ${name}</p>
+                </div>
+
+                <br>
+
+                <a href="installation.html" class="inline-table py-2 px-4 text-white bg-gray-600 rounded-md mr-2">Back</a>
+                <a href="api-reference.html" class="inline-table py-2 px-4 text-white bg-blue-600 rounded-md">Next - Api Reference<span class="ml-4">➜</span></a>
+                <br>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        let name = ''
+        let bali = new Bali(document.querySelector('#demo'))
+    </script>
+
+</body>
+
+</html>
